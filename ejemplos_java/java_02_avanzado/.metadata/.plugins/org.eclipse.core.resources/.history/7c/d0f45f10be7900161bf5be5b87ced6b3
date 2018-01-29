@@ -1,0 +1,28 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Main {
+
+	public static void main(String[] args) IOException {
+		try {
+		leerFicheroTexto("/Users/miguelcampos/prueba.txt");
+		} catch (FileNotFoundException e) {
+			System.out.println("La ruta al fichero no es válida");
+		}
+
+	}
+
+	private static void leerFicheroTexto(String ruta) throws FileNotFoundException, IOException {
+		FileReader f = new FileReader(ruta);
+		BufferedReader b = new BufferedReader(f);
+		
+		String lineaFichero;
+		while((lineaFichero = b.readLine()) != null) {
+			System.out.println(lineaFichero);
+		}
+		
+	}
+
+}

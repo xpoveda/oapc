@@ -1,0 +1,4 @@
+
+public interface InterfaceNumeros {
+	public void paridad(int numero);
+}

@@ -1,0 +1,4 @@
+
+public interface InterfaceNumeros {
+	public vois paridad(int numero);
+}

@@ -1,0 +1,5 @@
+
+@FunctionalInterface
+public interface InterfaceNumero {
+	public int numero();
+}

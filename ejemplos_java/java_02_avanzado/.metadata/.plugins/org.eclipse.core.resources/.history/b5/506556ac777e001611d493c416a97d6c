@@ -1,0 +1,13 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		InterfaceEjemplo iEjemplo = mensaje -> System.out.println("Imprimir: "+mensaje);
+		
+		iEjemplo.imprimir("Hola Mundo Lambda");
+		
+		InterfaceNumero iNumero = (x) -> return x+2;
+		iNumero.devolverNumero();
+	}
+		
+}

@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		List<Student> students = new ArrayList<Student>();
+		
+		students.add(new Student("Ana"));
+		students.add(new Student("Amapola"));
+		students.add(new Student("María"));
+		
+		List<String> names = students.stream().map(Student::getName).filter(name->name.startsWith("A")).collect(Collectors.toList());
+		
+		System.out.println(names.toString());
+	}
+		
+
+}

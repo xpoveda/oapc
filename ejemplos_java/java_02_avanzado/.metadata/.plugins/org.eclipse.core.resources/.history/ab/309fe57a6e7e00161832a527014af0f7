@@ -1,0 +1,28 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub 
+		EjemploInterfazFuncional e = (x) -> System.out.println(x+" ... ");
+		e.imprimir("Hola Mundo");
+		
+		// Expr. lambda con lista y predicado
+		public class Program {
+		    public static void main(String[] args) {
+
+			// Create ArrayList and add four String elements.
+			ArrayList<String> list = new ArrayList<>();
+			list.add("cat");
+			list.add("dog");
+			list.add("cheetah");
+			list.add("deer");
+
+			// Remove elements that start with c.
+			list.removeIf(element -> element.startsWith("c"));
+			System.out.println(list.toString());
+		    }
+		}
+		
+	}
+
+}

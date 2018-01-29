@@ -1,0 +1,12 @@
+<input type="text" #search>
+
+<div *ngIf="talks$ | async as talks; else loading">
+  <p (click)="onClicked($event, row)" *ngFor="let talk of talks" #row>
+    {{talk.title}}
+  </p>
+  <span *appTalk="let talk of talks">{{talk}}</span>
+</div>
+
+<ng-template #loading>Loading...</ng-template>
+
+<ng-template #inject></ng-template>

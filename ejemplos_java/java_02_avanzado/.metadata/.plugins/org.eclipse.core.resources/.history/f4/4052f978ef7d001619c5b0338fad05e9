@@ -1,0 +1,61 @@
+package model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+
+/**
+ * The persistent class for the Empleado database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Empleado.findAll", query="SELECT e FROM Empleado e")
+public class Empleado implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
+
+	private String cargo;
+
+	private String nif;
+
+	private String nombreApellidos;
+
+	public Empleado() {
+	}
+
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getCargo() {
+		return this.cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+
+	public String getNif() {
+		return this.nif;
+	}
+
+	public void setNif(String nif) {
+		this.nif = nif;
+	}
+
+	public String getNombreApellidos() {
+		return this.nombreApellidos;
+	}
+
+	public void setNombreApellidos(String nombreApellidos) {
+		this.nombreApellidos = nombreApellidos;
+	}
+
+}

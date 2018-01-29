@@ -1,0 +1,17 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		InterfaceNumero iNumero = (x) -> x+2;
+		System.out.println(iNumero.devolverNumero(5));
+		
+		InterfacePredicado iPredicado = (x) -> {
+			if(x%2==0) return true;
+			else return false;
+		};
+		
+		iPredicado.esPar(2);
+	}
+		
+}

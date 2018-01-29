@@ -1,0 +1,14 @@
+package model;
+
+import javax.persistence.Persistence;
+
+public class CrearEmpleado {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("EclipseLink_JPA");
+
+	}
+
+}

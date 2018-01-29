@@ -1,0 +1,25 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+
+	public static void main(String[] args) {
+		 
+		Map<Integer,Cliente> mapaClientes = new HashMap<Integer, Cliente>();
+		
+		Cliente c1 = new Cliente("Ana","88776655E","955442299");
+		Cliente c2 = new Cliente("María","45776655E","955442266");
+		Cliente c3 = new Cliente("Manuel","78776655E","955442254");
+		Cliente c4 = new Cliente("Antonio","3242424G","955442254");
+		
+		mapaClientes.put(1, c1);
+		mapaClientes.put(2, c2);
+		mapaClientes.put(3, c3);
+		mapaClientes.put(2, c4);
+		
+		System.out.print("Mapa clientes: "+mapaClientes);
+		
+		
+	}
+
+}
