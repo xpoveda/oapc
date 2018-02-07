@@ -21,21 +21,21 @@ Elementos a investigar
 
 Routing (navegacion)
 --------------------
-Tour of heroes example: https://v2.angular.io/docs/ts/latest/tutorial/
-Concrete page routing and navigation: https://www.concretepage.com/angular-2/angular-2-routing-and-navigation-example
+- Tour of heroes example: https://v2.angular.io/docs/ts/latest/tutorial/
+- Concrete page routing and navigation: https://www.concretepage.com/angular-2/angular-2-routing-and-navigation-example
 
 Localstorage (tratamiento de sesion)
 ------------------------------------
-Serie de 4 videos: http://www.render2web.com/tu-primera-aplicacion-angular-4-bootstrap-4-y-localstorage-parte-1/amp/
+- Serie de 4 videos: http://www.render2web.com/tu-primera-aplicacion-angular-4-bootstrap-4-y-localstorage-parte-1/amp/
 
 Llamadas API mediante Rxjs observers en angular 5
 -------------------------------------------------
-https://www.metaltoad.com/blog/angular-5-making-api-calls-httpclient-service
+- https://www.metaltoad.com/blog/angular-5-making-api-calls-httpclient-service
 
 i18n (internacionalizacion)
 ---------------------------
-http://www.ngx-translate.com/
-https://plnkr.co/edit/WccVZSBM0rUgq2sXSUbe?p=preview
+- http://www.ngx-translate.com/
+- https://plnkr.co/edit/WccVZSBM0rUgq2sXSUbe?p=preview
 
 Trabajando con angular cli
 ==========================
