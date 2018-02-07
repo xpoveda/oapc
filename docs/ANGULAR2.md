@@ -61,8 +61,18 @@ Despues de eso hacer un `ng serve -o`.
 
 Subiendo angular a produccion
 =============================
-Si queremos realizar la subida a produccion a `APACHE` lo que haremos es un `ng build -prod` que generará los ficheros minificados en la carpeta `dist`.
-Esos ficheros seran los unicos que tengamos que subir a la carpeta raiz del apache `htdocs` o `/var/www/html/` segun toque.
+Si queremos realizar la subida a produccion a `APACHE` lo que haremos es un `ng build -prod` que generará los ficheros minificados en la carpeta `dist`. Esos ficheros seran los unicos que tengamos que subir a la carpeta raiz del apache `htdocs` o `/var/www/html/` segun toque.
+
+Un ejemplo de ficheros generados
+```
+07/02/2018  15:47             3.294 3rdpartylicenses.txt
+07/02/2018  15:47            11.736 favicon.ico
+07/02/2018  15:47               597 index.html
+07/02/2018  15:47             1.445 inline.9b63728b6a9ae0443ce6.bundle.js
+07/02/2018  15:47           354.619 main.c1e64ad83af0c58e3c67.bundle.js
+07/02/2018  15:47            59.417 polyfills.d14582d1423c077d31d1.bundle.js
+07/02/2018  15:47               783 styles.a328b355b341e5597046.bundle.css
+```
 
 Es importante remarcar que ademas hemos de crear el fichero `.htaccess` (asegurandonos que tiene permisos) y con el siguiente contenido.
 Esto lo que hace es asegurarnos que todas las llamadas referencian al index.html que es el que enruta las llamadas mediante el routing
