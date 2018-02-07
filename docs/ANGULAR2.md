@@ -94,3 +94,10 @@ propio de angular.
 
 Subido a un servidor de produccion de digital ocean y funciona sin problema.
 Tambien probado en xampp y correcto.
+
+
+Mas documentacion
+=================
+
+https://github.com/nhpatt/openwebinars-angular
+
