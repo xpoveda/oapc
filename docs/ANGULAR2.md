@@ -18,10 +18,24 @@ Muy util tambien es el terminal integrado mediante `Ver\Terminal integrado`
 
 Elementos a investigar
 ======================
-Routing
-Localstorage
-Api calls httpclient
-ngs translate
+
+Routing (navegacion)
+--------------------
+Tour of heroes example: https://v2.angular.io/docs/ts/latest/tutorial/
+Concrete page routing and navigation: https://www.concretepage.com/angular-2/angular-2-routing-and-navigation-example
+
+Localstorage (tratamiento de sesion)
+------------------------------------
+Serie de 4 videos: http://www.render2web.com/tu-primera-aplicacion-angular-4-bootstrap-4-y-localstorage-parte-1/amp/
+
+Llamadas API mediante Rxjs observers en angular 5
+-------------------------------------------------
+https://www.metaltoad.com/blog/angular-5-making-api-calls-httpclient-service
+
+i18n (internacionalizacion)
+---------------------------
+http://www.ngx-translate.com/
+https://plnkr.co/edit/WccVZSBM0rUgq2sXSUbe?p=preview
 
 Trabajando con angular cli
 ==========================
@@ -32,7 +46,6 @@ ng new my-app
 cd my-app
 ng serve -o
 ```
-
 
 Si partimos de un proyecto de github haremos los siguientes pasos.
 Esto lo que hará es añadir los ficheros de la carpeta `node modules` y los que falten
@@ -71,7 +84,3 @@ propio de angular.
 
 Subido a un servidor de produccion de digital ocean y funciona sin problema.
 Tambien probado en xampp y correcto.
-
-
-
-
