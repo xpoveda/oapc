@@ -60,7 +60,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 })
 ```
 
-Y tambien este el template `src/app/app.component.html`
+Y tambien este template `src/app/app.component.html`
 ```
 <div class="btn-group" dropdown>
   <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
