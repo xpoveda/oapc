@@ -14,7 +14,7 @@ Es importante remarcar que ngx-bootstrap no tiene soporte para navbar, por lo ta
 
 Pero antes de nada procedemos a instalarlo. La forma de instalarla con angular cli y bootstrap 4 se indica aqui.
 
-https://github.com/valor-software/ngx-bootstrap/blob/development/docs/getting-started/bootstrap4.md
+*https://github.com/valor-software/ngx-bootstrap/blob/development/docs/getting-started/bootstrap4.md*
 
 Creamos un proyecto desde 0
 ```
