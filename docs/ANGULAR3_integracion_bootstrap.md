@@ -1,7 +1,7 @@
 Integracion de Angular con Bootstrap
 ====================================
 
-Muy importante este video
+Muy importante este video para ver como añadir un navbar de bootstrap integrado con angular
 
 *https://www.youtube.com/watch?v=BlGh1WbOC14*
 
