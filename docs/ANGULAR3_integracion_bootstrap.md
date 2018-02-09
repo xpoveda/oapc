@@ -1,6 +1,11 @@
 Integracion de Angular con Bootstrap
 ====================================
 
+Muy importante este video
+
+*https://www.youtube.com/watch?v=BlGh1WbOC14*
+
+
 Para que Angular pueda trabajar con Bootstrap la forma mas sencilla de hacerlo es con la libreria `ngx-bootstrap`.
 Sin esa libreria podriamos utilizar solo la parte de grid, porque la parte de interaccion con los elementos que nos provee Bootstrap
 daria error de javascript.
