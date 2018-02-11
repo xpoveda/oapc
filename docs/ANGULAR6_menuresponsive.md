@@ -8,7 +8,7 @@ npm install ngx-bootstrap --save
 ```
 En el `index.html` justo antes de acabar el elemento `</head>`
 ```
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 ```
 
 En el fichero `app.module.ts` 
