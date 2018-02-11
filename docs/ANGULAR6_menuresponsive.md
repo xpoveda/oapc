@@ -8,10 +8,11 @@ npm install ngx-bootstrap --save
 ```
 En el `index.html` justo antes de acabar el elemento `</head>`
 
-Nota importante: con la version 4 de bootstrap el menu no funciona correctamente.
 ```
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 ```
+**Nota importante: con la version 4 de bootstrap el menu no funciona correctamente.**
+
 
 En el fichero `app.module.ts` 
 ```
