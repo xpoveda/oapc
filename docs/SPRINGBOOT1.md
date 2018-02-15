@@ -71,19 +71,19 @@ public class NoteController {
     	
     		return s
     			// Nos quedamos solo con el titulo de los objetos
-        	//.map(x -> x.getTitle())
+        		//.map(x -> x.getTitle())
     			// Nos quedamos con los objetos que cumplen una propiedad, si no es cierta devolvemos null 			
-        	//.map(x -> { if (x.getTitle().equals("mi cuarta nota")) return x; else return null; })
+        		//.map(x -> { if (x.getTitle().equals("mi cuarta nota")) return x; else return null; })
     			// Filtramos los null
-        	//.filter(x -> x != null)
-        	// Nos saltamos n elementos, skip corresponderia a la funcionalidad de offset
-        	// .skip(1)
-        	// Limitamos el numero de registros a un limite
-        	//.limit(2)
+        		//.filter(x -> x != null)
+        		// Nos saltamos n elementos, skip corresponderia a la funcionalidad de offset
+        		// .skip(1)
+        		// Limitamos el numero de registros a un limite
+        		//.limit(2)
     			// Contamos
     			//.count();
-        	// Convertimos el stream en una lista
-        	.collect(Collectors.toList());
+        		// Convertimos el stream en una lista
+        		.collect(Collectors.toList());
     }
     
     @GetMapping("/notes/{id}")
