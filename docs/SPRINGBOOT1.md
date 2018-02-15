@@ -128,6 +128,11 @@ public class NoteController {
 ```
 
 En esta pagina se explica todo lo **IMPORTANTE** que hay que saber sobre `JPA`.
+
+```
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
+```
+
 En este caso jugamos con distintos tipos de colecciones y anotamos las querys con JPA el decorador @Query.
 
 *NoteRepository.java
