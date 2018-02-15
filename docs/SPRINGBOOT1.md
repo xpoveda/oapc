@@ -127,9 +127,10 @@ public class NoteController {
 }
 ```
 
-En esta pagina se explica todo lo **IMPORTANTE** que hay que saber sobre `JPA`.
+En estas paginas se explica todo lo **IMPORTANTE** que hay que saber sobre `JPA`.
 
 ```
+https://docs.spring.io/spring-data/jpa/docs/1.5.0.RELEASE/reference/html/jpa.repositories.html
 https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
 ```
 
