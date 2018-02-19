@@ -28,6 +28,47 @@ https://chariotsolutions.com/blog/post/angular-2-spring-boot-jwt-cors_part1/
 https://chariotsolutions.com/blog/post/angular-2-spring-boot-jwt-cors_part2/
 ```
 
+Una forma sencilla de saltarse el problema del CORS es habilitar la autentificacion de los distintos endpoints inyectando un @bean en el Application.java de nuestra aplicacion de spring boot. De esta forma no se necesita habilitar proxy y podemos acceder directamente por http://localhost
+
+En el servidor..
+```
+package com.bfwg;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+	/*
+	  @Bean
+	    public WebMvcConfigurer corsConfigurer() {
+	        return new WebMvcConfigurerAdapter() {
+	            @Override
+	            public void addCorsMappings(CorsRegistry registry) {
+	                registry.addMapping("/api/login").allowedOrigins("http://localhost:4200");
+	            }
+	        };
+	    }
+	    
+	 */	  	
+}
+```
+
+Y en el frontend...
+```
+      //this.http.post <MyTokenResponse> ('/api/login', this.mybody, this.myoptions)
+      this.http.post <MyTokenResponse> ('http://localhost:8080/api/login', this.mybody, this.myoptions)
+```
+
+
 Starters principales:
 ```
 https://github.com/bfwg/springboot-jwt-starter
