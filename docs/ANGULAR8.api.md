@@ -297,3 +297,44 @@ interface MyTokenResponse {
   expires_in:   string;
 }
 ```
+
+
+Modificaciones en el API
+------------------------
+
+application.properties
+```
+#----------------------------------------------------------------------------
+app.name = springboot-jwt-demo
+#----------------------------------------------------------------------------
+jwt.header            = Authorization
+jwt.expires_in        = 600
+jwt.mobile_expires_in = 600
+jwt.secret            = S3cr3t0  
+#----------------------------------------------------------------------------
+spring.datasource.url         = jdbc:mysql://localhost:3306/test4
+spring.datasource.username    = test4
+spring.datasource.password    = test4
+#----------------------------------------------------------------------------
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+# possible values: validate | update | create | create-drop
+spring.datasource.initialize  = true
+spring.jpa.hibernate.ddl-auto = create
+```
+
+import.sql
+```
+INSERT INTO USERS (id, username, password, first_name, last_name, email, phone_number, enabled, last_password_reset_date) VALUES (1, 'user', '$2a$04$Vbug2lwwJGrvUXTj6z7ff.97IzVBkrJ1XfApfGNl.Z695zqcnPYra', 'Fan', 'Jin', 'user@example.com', '+1234567890', true, '2017-10-01 21:58:58');
+INSERT INTO USERS (id, username, password, first_name, last_name, email, phone_number, enabled, last_password_reset_date) VALUES (2, 'admin', '$2a$04$Vbug2lwwJGrvUXTj6z7ff.97IzVBkrJ1XfApfGNl.Z695zqcnPYra', 'Jing', 'Xiao', 'admin@example.com', '+0987654321', true, '2017-10-01 18:57:58');
+
+INSERT INTO AUTHORITY (id, name) VALUES (1, 'ROLE_USER');
+INSERT INTO AUTHORITY (id, name) VALUES (2, 'ROLE_ADMIN');
+
+INSERT INTO USER_AUTHORITY (user_id, authority_id) VALUES (1, 1);
+INSERT INTO USER_AUTHORITY (user_id, authority_id) VALUES (2, 1);
+INSERT INTO USER_AUTHORITY (user_id, authority_id) VALUES (2, 2);
+```
+
+```
+Buscar "/auth" y modificar por "/api"
+```
