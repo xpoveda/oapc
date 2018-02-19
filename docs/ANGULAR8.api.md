@@ -1,14 +1,16 @@
-Acceso desde angular contra nuestra API basada en token y localstorage (no cookies)
-===================================================================================
 
-Para probar en desarrollo hemos de activar el proxy de angular para que el navegador no nos corte la llamada por "CORS".
+Acceso desde angular contra nuestra API
+=======================================
 
+Resolución CORS via proxy angular
+----------------------------------
+
+Para probar en desarrollo hemos de activar el proxy de angular para que el navegador no nos corte la llamada por "CORS", un mecanismo de seguridad que implementan los navegadores para que no se puedan realizar llamadas a terceros por ajax de forma no controlada y asi evitar la inyeccion de codigo.
 ```
 https://juristr.com/blog/2016/11/configure-proxy-api-angular-cli/
 ```
 
-Para ello hemos de modificar el `package.json` añadiendo un `"start": "ng serve --proxy-config proxy.conf.json"` y en el fichero
-de configuracion del proxy poner
+Para ello hemos de modificar el `package.json` modificando esta linea tal y como queda `"start": "ng serve --proxy-config proxy.conf.json"` y en el fichero de configuracion del proxy poner
 
 ```
 {
@@ -19,16 +21,19 @@ de configuracion del proxy poner
 }
 ```
 
-Si no se hace esto con `postman`, que es una herramiento al fin y al cabo funciona, pero con navegador no.
+Si no se hace esto con `postman` o `curl`, que son herramientas y no navegadores, funcionaria pero no sería real.
 
-Bueno documento en el que se explica esta problematica del CORS y ademas se comenta como hacer que nuestro API REST de springboot pueda 
+Buen documento en el que se explica esta problematica del CORS y ademas se comenta como hacer que nuestro API REST de springboot pueda 
 aceptar distintos origenes y no se tenga que habilitar el acceso via proxy.
 ```
 https://chariotsolutions.com/blog/post/angular-2-spring-boot-jwt-cors_part1/
 https://chariotsolutions.com/blog/post/angular-2-spring-boot-jwt-cors_part2/
 ```
 
-Una forma sencilla de saltarse el problema del CORS es habilitar la autentificacion de los distintos endpoints inyectando un @bean en el Application.java de nuestra aplicacion de spring boot. De esta forma no se necesita habilitar proxy y podemos acceder directamente por http://localhost
+Forma sencilla saltarse el problema del CORS
+--------------------------------------------
+
+Hbilitar la autentificacion de los distintos endpoints inyectando un @bean en el `Application.java` de nuestra aplicacion de spring boot. De esta forma no se necesita habilitar proxy y podemos acceder directamente por http://localhost:8080
 
 En el servidor..
 ```
@@ -68,14 +73,13 @@ Y en el frontend...
       this.http.post <MyTokenResponse> ('http://localhost:8080/api/login', this.mybody, this.myoptions)
 ```
 
-
 Starters principales:
 ```
 https://github.com/bfwg/springboot-jwt-starter
 https://github.com/bfwg/angular-spring-starter
 ```
 
-modulo principal
+modulo principal angular
 ```
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -95,7 +99,7 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
-componente principal
+componente principal angular
 ```
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
