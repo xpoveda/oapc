@@ -241,11 +241,9 @@ export class AppComponent implements OnInit {
 
     //////////////////////////////////////////////////////////// 
 
-    /*
-
     if (localStorage.getItem('tk'))
     {  
-      this.mybody     = {"oldPassword" : "flash2009" , "newPassword" : "123" };
+      this.mybody     = {"oldPassword" : "123" , "newPassword" : "456" };
 
       this.myoptions    = { headers: new HttpHeaders (
         { 'Content-Type' : 'application/json' , 
@@ -280,8 +278,6 @@ export class AppComponent implements OnInit {
             console.log("nuevo token : " + localStorage.getItem('tk'));                  
           } );
     } 
-
-    */
     
     /////////////////////////////////////////////////////////////
     //// Acceso a API REST en internet
