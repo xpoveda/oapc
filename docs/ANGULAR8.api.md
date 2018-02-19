@@ -87,7 +87,7 @@ Implementación de acceso desde angular via API rest
 
 
 modulo principal angular
-```
+```angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -107,7 +107,7 @@ export class AppModule { }
 ```
 
 componente principal angular
-```
+```angular
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
