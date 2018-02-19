@@ -12,7 +12,7 @@ https://juristr.com/blog/2016/11/configure-proxy-api-angular-cli/
 
 Para ello hemos de modificar el `package.json` modificando esta linea tal y como queda `"start": "ng serve --proxy-config proxy.conf.json"` y en el fichero de configuracion del proxy poner
 
-```
+```json
 {
     "/api": {
     "target": "http://localhost:8080",
@@ -36,7 +36,7 @@ Resolución CORS en servidor
 Hbilitar la autentificacion de los distintos endpoints inyectando un @bean en el `Application.java` de nuestra aplicacion de spring boot. De esta forma no se necesita habilitar proxy y podemos acceder directamente por http://localhost:8080
 
 En el servidor..
-```
+```java
 package com.bfwg;
 
 import org.springframework.boot.SpringApplication;
@@ -68,7 +68,7 @@ public class Application {
 ```
 
 Y en el frontend...
-```
+```java
       //this.http.post <MyTokenResponse> ('/api/login', this.mybody, this.myoptions)
       this.http.post <MyTokenResponse> ('http://localhost:8080/api/login', this.mybody, this.myoptions)
 ```
@@ -87,7 +87,7 @@ Implementación de acceso desde angular via API rest
 
 
 modulo principal angular
-```angular
+```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -107,7 +107,7 @@ export class AppModule { }
 ```
 
 componente principal angular
-```angular
+```typescript
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
